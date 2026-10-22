@@ -1,8 +1,8 @@
 name: flutter_app_branding
 description: Change your Flutter app icon, name, localized names and flavors from one YAML file with one command. Android, iOS, web, Windows and macOS.
 version: 0.1.0
-repository: https://github.com/YOUR_GITHUB_USERNAME/flutter_app_branding
-issue_tracker: https://github.com/YOUR_GITHUB_USERNAME/flutter_app_branding/issues
+repository: https://github.com/amollokhande1234/flutter_app_branding.git
+issue_tracker: https://github.com/amollokhande1234/flutter_app_branding.git/issues
 topics:
   - flutter
   - icons

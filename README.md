@@ -14,7 +14,7 @@ dart run flutter_app_branding
   [Coming from flutter_launcher_icons](#coming-from-flutter_launcher_icons).
 
 > Early release (0.1.0). Please
-> [report issues](https://github.com/YOUR_GITHUB_USERNAME/flutter_app_branding/issues)
+> [report issues](https://github.com/amollokhande1234/flutter_app_branding.git/issues)
 > you run into.
 
 ## Quick start
@@ -38,7 +38,7 @@ dart run flutter_app_branding
 ```yaml
 flutter_app_branding:
   name: "My App"
-  icon: assets/icon.png      # square PNG, 1024x1024 recommended
+  icon: assets/icon.png # square PNG, 1024x1024 recommended
   platforms: [android, ios]
 ```
 
@@ -60,14 +60,14 @@ dart run flutter_app_branding --name "My App" --icon assets/icon.png
 You can keep the settings in `flutter_app_branding.yaml` or in a
 `flutter_app_branding:` block inside `pubspec.yaml`.
 
-| Key | Required | What it does |
-|---|---|---|
-| `name` | yes | The app name shown under the icon. |
-| `icon` | recommended | Path to a square PNG or JPG (1024x1024 is best). |
-| `platforms` | no | Any of `android`, `ios`, `web`, `windows`, `macos`. Default: all. Platforms without a folder are skipped. |
-| `localized_names` | no | Name per language, for example `hi: "माय ऐप"`. Android only. |
-| `flavors` | no | Per-flavor `name`, `icon` and `badge`. See [Flavors](#flavors). |
-| `adaptive_icon` | no | Android adaptive icon `background` (color like `"#FFFFFF"` or image), `foreground` and `monochrome`. Built from `icon` automatically if omitted; set `adaptive_icon: false` to turn that off. |
+| Key               | Required    | What it does                                                                                                                                                                                  |
+| ----------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`            | yes         | The app name shown under the icon.                                                                                                                                                            |
+| `icon`            | recommended | Path to a square PNG or JPG (1024x1024 is best).                                                                                                                                              |
+| `platforms`       | no          | Any of `android`, `ios`, `web`, `windows`, `macos`. Default: all. Platforms without a folder are skipped.                                                                                     |
+| `localized_names` | no          | Name per language, for example `hi: "माय ऐप"`. Android only.                                                                                                                                  |
+| `flavors`         | no          | Per-flavor `name`, `icon` and `badge`. See [Flavors](#flavors).                                                                                                                               |
+| `adaptive_icon`   | no          | Android adaptive icon `background` (color like `"#FFFFFF"` or image), `foreground` and `monochrome`. Built from `icon` automatically if omitted; set `adaptive_icon: false` to turn that off. |
 
 Full example:
 
@@ -153,18 +153,18 @@ The same applies to `rename_app` and similar name tools.
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `dart run flutter_app_branding` | Same as `apply`. |
-| `apply --dry-run` | Shows exactly which files would change. Writes nothing. |
-| `apply --clean` | Applies, then runs `flutter clean` and `flutter pub get`. |
-| `apply -P android` | Only the listed platforms. |
-| `revert` | Restores the files changed by the last `apply`. |
-| `validate` | Checks the config and images only. |
-| `doctor` | Finds missing platform folders, old tools and config problems. |
-| `init` | Creates a pre-filled config. |
-| `migrate [--write]` | Converts a `flutter_launcher_icons` config. |
-| `preview` | Writes a contact sheet of your icon in circle, rounded and square masks to `.flutter_app_branding/preview.png`. |
+| Command                         | What it does                                                                                                    |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `dart run flutter_app_branding` | Same as `apply`.                                                                                                |
+| `apply --dry-run`               | Shows exactly which files would change. Writes nothing.                                                         |
+| `apply --clean`                 | Applies, then runs `flutter clean` and `flutter pub get`.                                                       |
+| `apply -P android`              | Only the listed platforms.                                                                                      |
+| `revert`                        | Restores the files changed by the last `apply`.                                                                 |
+| `validate`                      | Checks the config and images only.                                                                              |
+| `doctor`                        | Finds missing platform folders, old tools and config problems.                                                  |
+| `init`                          | Creates a pre-filled config.                                                                                    |
+| `migrate [--write]`             | Converts a `flutter_launcher_icons` config.                                                                     |
+| `preview`                       | Writes a contact sheet of your icon in circle, rounded and square masks to `.flutter_app_branding/preview.png`. |
 
 Options that apply to every command: `--project/-p` (project folder),
 `--config/-c` (config file), `--json` (machine-readable output and exit codes
@@ -174,13 +174,13 @@ Running the command twice changes nothing the second time.
 
 ## What changes on each platform
 
-| Platform | Name | Icon |
-|---|---|---|
-| Android | `strings.xml`, manifest label | All densities, adaptive + Android 13 themed icon |
-| iOS | `Info.plist` display name | All required sizes (alpha removed automatically) |
-| Web | page title, `manifest.json` | favicon, normal and maskable icons |
-| Windows | window title, file properties | multi-size `app_icon.ico` |
-| macOS | `PRODUCT_NAME` | all required sizes |
+| Platform | Name                          | Icon                                             |
+| -------- | ----------------------------- | ------------------------------------------------ |
+| Android  | `strings.xml`, manifest label | All densities, adaptive + Android 13 themed icon |
+| iOS      | `Info.plist` display name     | All required sizes (alpha removed automatically) |
+| Web      | page title, `manifest.json`   | favicon, normal and maskable icons               |
+| Windows  | window title, file properties | multi-size `app_icon.ico`                        |
+| macOS    | `PRODUCT_NAME`                | all required sizes                               |
 
 ## Good to know
 
