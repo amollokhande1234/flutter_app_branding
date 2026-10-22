@@ -14,7 +14,7 @@ dart run flutter_app_branding
   [Coming from flutter_launcher_icons](#coming-from-flutter_launcher_icons).
 
 > Early release (0.1.0). Please
-> [report issues](https://github.com/amollokhande1234/flutter_app_branding.git/issues)
+> [report issues](https://github.com/amollokhande1234/flutter_app_branding/issues)
 > you run into.
 
 ## Quick start
